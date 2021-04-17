@@ -1,0 +1,24 @@
+products.csv goes here
+
+NDC : 5-4-2
+
+prodid            Product ID
+ndc               Product National Drug Code (NDC)
+prodtype          Product Type Name
+propname          Proprietary Name
+propsuf           Proprietary Name Suffix
+npropname         Nonproprietary Name
+dosename          Dosage Form Name
+routename         Route Name
+stmarkdatestr     Start Marketing Date String
+stmarkdate        Start Marketing Date
+endmarkdatestr    End Marketing Date String
+endmarkdate       End Marketing Date
+markname          Marketing Category Name
+appnum            Application Number
+labelname         Labeler Name
+subname           Substance Name
+actnumstr         Active Numerator Strength
+actingunit        Active Indgredient Unit
+pharmclas         Pharm Classes
+deasched          DEA Schedule
