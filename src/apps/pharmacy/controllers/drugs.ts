@@ -64,7 +64,7 @@ export const findDrugs = [
           },
         },
       ]);
-      res.json(results);
+      res.json(results[0]);
     } catch (error) {
       next(error);
     }
