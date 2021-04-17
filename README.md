@@ -13,7 +13,7 @@ This drug search api makes use of the NBER drug information files. Before using 
 
 ## Environment Variables
 
-`.env` in project root
+`.env` in keys folder
 
 ```bash
 PORT=5000
