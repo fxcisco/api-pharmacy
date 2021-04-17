@@ -23,7 +23,5 @@ function verifyEnvKeys(keys: { [k: string]: string | number }) {
   });
 }
 
-verifyEnvKeys(HOST_ORIGINS);
 verifyEnvKeys(KEYS);
-
 export { KEYS, ALLOWED_ORIGINS };

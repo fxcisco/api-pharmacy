@@ -1,5 +1,5 @@
 import express, { Response } from 'express';
-import { ALLOWED_ORIGINS, __prod__ } from './config';
+import { __prod__ } from './config';
 import { errorHandler } from './common/middlewares/errorHandler';
 
 import cors from 'cors';
@@ -25,7 +25,7 @@ const main = async () => {
     ],
     credentials: true,
     methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-    origin: ALLOWED_ORIGINS
+    origin: '*'
   };
   app.use(helmet());
   app.use(cors(options));
