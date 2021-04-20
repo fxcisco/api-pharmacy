@@ -11,6 +11,7 @@
     "pretty": true,
     "sourceMap": true,
     "outDir": "./dist",
+    "rootDir": "src",
     "paths": {
       "@/*": ["*"]
     },
@@ -35,11 +36,11 @@
   },
   "exclude": [
     "node_modules",
-    "data/*"
+    "test/**/*.ts",
+    "data/*",
   ],
   "include": [
     "./src/**/*.tsx",
     "./src/**/*.ts",
-    "test/**/*.ts"
   ]
 }

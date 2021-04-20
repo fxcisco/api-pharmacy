@@ -4,13 +4,16 @@
   "description": "Backend component of the health full stack application",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "watch": "tsc -p tsconfig.build.json -w",
+    "build": "rm -rf dist/* && tsc -p tsconfig.build.json",
     "start": "node dist/server.js",
     "dev": "nodemon dist/server.js",
-    "formatter": "node dist/__seeder__/parser.js && node dist/__seeder__/condenser.js",
+    "test": "jest",
+    "test:coverage": "jest --bail --coverage --verbose --silent",
     "seeder:import": "node dist/__seeder__",
-    "seeder:delete": "node dist/__seeder__ -d"
+    "seeder:delete": "node dist/__seeder__ -d",
+    "formatter": "node dist/__seeder__/parser.js && node dist/__seeder__/condenser.js",
+    "builder": "tsc --project tsconfig.prod.json"
   },
   "keywords": [],
   "author": "Francisco Diaz",
@@ -18,11 +21,14 @@
   "devDependencies": {
     "@types/cors": "^2.8.7",
     "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.22",
     "@types/mongoose": "^5.7.36",
     "@types/morgan": "^1.9.1",
     "@types/node": "^14.11.2",
     "@types/validator": "^13.1.0",
+    "jest": "^26.6.3",
     "nodemon": "^2.0.4",
+    "ts-jest": "^26.5.5",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
