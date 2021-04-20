@@ -62,7 +62,7 @@ export class DrugCondenser {
         actingunit: item['actingunit'],
       });
     }
-    const output = createWriteStream(path.join(__root__, 'data/drugs.json'));
+    const output = createWriteStream(path.join(__root__, 'data', 'drugs.json'));
     const values = Object.values(drugHash);
     const num = values.length;
 

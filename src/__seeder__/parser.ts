@@ -3,8 +3,8 @@ import { createReadStream, createWriteStream } from 'fs';
 
 class DrugParser {
   static parse(filename: string) {
-    const input = createReadStream(path.join(__dirname,  '../..', `data/${filename}`));
-    const output = createWriteStream(path.join(__dirname,'../..', 'data/product.json'));
+    const input = createReadStream(path.join(__dirname,  '..','..', 'data', `${filename}`));
+    const output = createWriteStream(path.join(__dirname,'..','..', 'data', 'product.json'));
     let remaining = '', isHeader = true, headers: any[];
 
     output.write('[\n');
@@ -59,7 +59,7 @@ class DrugParser {
       obj[headers[p2]] = partials[p2]?.replace(/"/g, '') || '';
     }
     for (let p3 = 14; p3 < 20; p3++) {
-      obj[headers[p3]] = partials[p3]?.replace(/"/g, '' || '');
+      obj[headers[p3]] = partials[p3]?.replace(/"/g, '') || '';
     }
     return obj;
   }
